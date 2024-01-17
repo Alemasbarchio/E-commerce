@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <nav >
+            <ul  class="nav-menu">
+                <img class="img-logo" src="./assets/logo eletrica.png" alt="Logo e-commerce">
+                <li><a href="index.html">Home</a></li>
+                <li> <a href="sobre.html"> Sobre </a></li>
+                <li class="nav-item dropdown">
+                                       
+            </ul>
+
+        </nav>
+        <a Id="user"></a>
+
+        <aside class="btn-entrar-carrinho">
+            <a href="#sec-desc">
+                 <button id="btn_Entrar" class="btn-entrar" type="submit">
+                    Entrar
+                    <img class="icon-button" src="./assets/icon-login.png">
+                 </button>
+            </a>
+            <a href="#sec-car">
+                <button id="btn_Carrinho" class="btn-carrinho" type="submit">
+                    <img class="icon-button" src="./assets/icon_carrinho.svg">
+                    Carrinho
+                    <p id="itens-carrinho"></p>
+                </button>
+            </a></li>
+
+        </aside>
+    </header>
+
+
+    <main>
+        <section id="sec-desc" class="desc-loja">
+            <h1> Loja do Severino </h1>
+            <span>Soluções em Energia</span>
+        </section>
+
+        <section class="card-produtos">
+            <ul  class="card-produtos__lista-produtos">
+            </ul>
+        </section>
+
+
+        <section id="sec-car" class="container normal-section">
+            <h2 class="section-title">Carrinho</h2>
+            <table id="table-itens" class="cart-table">
+                <thead>
+                    <tr>
+                        <th class="table-head-item first-col">Item</th>
+                        <th class="table-head-item second-col">Preço</th>
+                        <th class="table-head-item third-col">Quantidade</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="cart-total-container">
+                            <strong>Total</strong>
+                            <span>R$0,00</span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <button type="button" class="purchase-button">Finalizar Compra</button>
+        </section>
+
+    </main>
+
+
+    <aside class="tela-login">
+        <div id="modal_Login" class="tela-login-modal">
+            <button id="btn_FecharTelaLogin" class="tela-login-modal_fechar" type="button">
+                x
+            </button>
+            <img class="img-logo-login" src="./assets/icone-login.png" alt="">
+            <input id="inp_EmailLogin" class="input-form" type="text" placeholder="Digite seu email">
+            <input id="inp_EmailSenha"  class="input-form" type="text" placeholder="Digite seu senha">
+            <button id="btn_FazerLogin" class="btn-fazerlogin" type="submit">
+                Login
+            </button>
+            <div class="abrir-cadastro-usuario">
+                <a id="lbl_mensagemLogin"></a>
+                <button id="btn_FazerCadastro" class="btn-fazercadastro" type="submit">
+                    Criar Conta
+                </button>
+            </div>
+        </div>
+    </aside>
+
+
+    <aside id="modal_Cadastro" class="tela-cadastro">
+
+        <form class="tela-cadastro-modal">
+            <button id="btn_fecharCadastro" class="tela-cadastro-modal_fechar" type="button">
+                x
+            </button>
+
+            <ul class="formulario-cadastro">
+
+                <li>
+                    <label for="cpf">CPF * </label>
+                    <input id="inp_CPF" class="input-form" type="text" placeholder="Digite seu CPF">
+                    <a id="msgErro"></a>
+                </li>
+
+                <li>
+                    <label for="nome">Nome * </label>
+                    <input id="inp_Nome" class="input-form" type="text" placeholder="Digite seu nome">
+                </li>
+
+                <li>
+                    <label for="email">Email * </label>
+                    <input id="inp_CadastroEmail" class="input-form" type="text" placeholder="Digite seu email">
+                </li>
+
+                <li>
+                    <label for="senha">Senha * </label>
+                    <input id="inp_CadastroSenha" class="input-form" type="text" placeholder="Digite sua senha">
+                </li>
+
+            </ul>
+        </form>
+
+        <div class="cadastrar-usuario">
+            <h3 id="erroCadastro"></h3>
+            <button id="btn_EnviarCadastro" class="btn-enviar-cadastro" type="button">
+                Cadastrar
+            </button>
+
+        </div>
+    </aside>
+
+
+    <script src="./js/login.js"></script>
+    <script src="./js/carrinhoFinal.js"></script>
+
+
+</body>
+
+<footer class="footer">
+    <h3>@Loja do severino</h3>
+</footer>
+
+</html>

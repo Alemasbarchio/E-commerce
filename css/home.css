@@ -1,0 +1,429 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --white: #fff;
+    --red: #aa0505;
+    --gray: #959595;
+    --blue: #006437;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+a,
+li {
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: #DFDFDE;
+    height: 55px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .nav-menu {
+
+        display: flex;
+        gap: 30px;
+        align-items: center;
+
+    }
+
+    .nav-menu li a {
+        font-weight: bold;
+        font-size: 14px;
+        color: #006437;
+        font-family: sans-serif;
+    }
+
+    .img-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .icon-button {
+        width: 17px;
+        height: 17px;
+
+    }
+
+}
+
+.btn-entrar-carrinho {
+    display: flex;
+    gap: 5px;
+
+    .btn-entrar,
+    .btn-carrinho {
+        gap: 5px;
+        width: 100px;
+        height: 35px;
+        border-radius: 7px;
+        border: solid black 1px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+  
+}
+
+.btn-entrar:hover,
+.btn-carrinho:hover,
+.btn-add-carrinho:hover,
+.btn-fazerlogin:hover,
+.btn-fazercadastro:hover,
+.btn-enviar-cadastro:hover {
+    background-color: #006437;
+    color: white;
+}
+
+.tela-login-modal {
+    top: 8%;
+    left: 45%;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    background: linear-gradient(-120deg, rgba(0, 0, 0, 0.098) 0%, rgb(255, 255, 255) 90%);
+    backdrop-filter: blur(4px);
+    border: outset #006437 3px;
+    width: 15%;
+    min-width: 300px;
+    height: 260px;
+    border-radius: 8px;
+
+
+    .tela-login-modal_fechar {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        color: white;
+        width: 20px;
+        font-size: 20px;
+        border: none;
+        background-color: rgb(255, 0, 0);
+        cursor: pointer;
+    }
+
+
+    .abrir-cadastro-usuario {
+        width: 100%;
+        height: 80px;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 5px;
+    }
+}
+
+.tela-cadastro {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 700px;
+    width: 50%;
+    gap: 10px;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 500px;
+    position: absolute;
+    justify-content: center;
+    align-items: left;
+    top: 8%;
+    left: 25%;
+    background: linear-gradient(-120deg, rgba(0, 0, 0, 0.098) 0%, rgb(255, 255, 255) 70%);
+    backdrop-filter: blur(4px);
+    border: outset #006437 3px;
+    border-radius: 8px;
+
+}
+
+.tela-cadastro-modal {
+    width: 70%;
+
+    .tela-cadastro-modal_fechar {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        color: white;
+        width: 20px;
+        font-size: 20px;
+        border: none;
+        background-color: rgb(255, 0, 0);
+        cursor: pointer;
+    }
+
+
+}
+
+.input-form {
+
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    border: 2px solid rgba(70, 70, 70, 0.566);
+    border-radius: 8px;
+}
+
+
+.cadastrar-usuario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.formulario-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario-cadastro li {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.btn-enviar-cadastro,
+.btn-fazerlogin,
+.btn-fazercadastro {
+    width: 100px;
+    height: 30px;
+    border-radius: 7px;
+    border: solid black 1px;
+    cursor: pointer;
+
+}
+
+.desc-loja {
+    padding-top: 70px;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(0deg, #103e10 0%, rgb(4, 56, 51) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+main {
+    .desc-loja>h1 {
+        color: white;
+        font-size: 65px;
+        font-family: sans-serif;
+    }
+
+    .desc-loja>span {
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+
+    }
+}
+
+
+.card-produtos__lista-produtos {
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+
+    .imagem {
+
+        width: 270px;
+        height: 230px;
+
+    }
+}
+
+.card-produtos__lista-produtos li {
+    transition: all .3s ease-in;
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    border: solid rgba(0, 0, 0, 0.21) 1px;
+    height: 420px;
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+
+}
+
+.card-produtos__lista-produtos li:hover {
+
+    background: linear-gradient(180deg, #EEEEEE 0%, #DFDFDE 100%);
+}
+
+.card-produtos__lista-produtos h3 {
+    color: #006437;
+    font-family: sans-serif;
+    font-size: 17px;
+
+}
+
+
+
+.btn-add-carrinho {
+
+    background-color: white;
+    width: 100px;
+    cursor: pointer;
+    height: 35px;
+    border-radius: 7px;
+    border: outset #006437;
+
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+  
+}
+.footer h3{
+    color: white;
+}
+
+/* CSS carrinho */
+.normal-section+.normal-section {
+    margin-top: 80px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.section-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+/* CSS carrinho */
+
+
+.normal-section+.normal-section {
+    margin-top: 80px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.section-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+
+.table-head-item {
+    text-align: start;
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.second-col,
+.third-col {
+    width: 26%;
+}
+
+.cart-total-container {
+    border-top: 1px solid var(--gray);
+    text-align: end;
+    padding: 6px 16px 0 0;
+    font-size: 18px;
+}
+
+.purchase-button {
+    
+    display: flex;
+    margin: 24px auto 0;
+    background: var(--blue);
+    color: var(--white);
+    border: 0;
+    border-radius: 7px;
+    padding: 16px 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    transition: filter 0.2s;
+}
+
+button {
+    cursor: pointer;
+}
+
+.cart-product td {
+    padding: 8px 0;
+}
+
+.cart-product-image {
+    width: 120px;
+    height: 70px;
+}
+
+.product-identification {
+    display: flex;
+    align-items: center;
+}
+
+.product-qtd-input {
+    width: 48px;
+    height: 34px;
+    border-radius: 6px;
+    border: 2px solid var(--blue);
+    text-align: center;
+    background: #eee;
+}
+
+.remove-product-button {
+    margin-left: 12px;
+    background-color: #959595;
+    color: var(--white);
+    padding: 10px 8px;
+    border: 0;
+    border-radius: 6px;
+    transition: filter 0.2s;
+}
