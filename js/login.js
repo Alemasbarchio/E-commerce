@@ -36,12 +36,25 @@ class Usuario {
         setTimeout(() => {
           modal_Cadastro.style.display = "none";
           erroCadastro.textContent = "";
-        }, 1500)
+          const Toast = Swal.mixin({
+            toast: true,
+            showConfirmButton: false,
+            timer: 2000,
+           
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          Toast.fire({
+            icon: "success",
+            title: "Usuário cadastrado com sucesso!"
+          });
+        }, 1000)
         erroCadastro.textContent = "Cadastrando Usuário...";
         const limpaForm = document.querySelector(".formulario-cadastro");
         limpaForm.querySelectorAll("input").forEach((campo) => {
           campo.value = "";
-
         })
       };
     })
